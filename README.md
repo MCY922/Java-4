@@ -231,25 +231,27 @@ public class Text {
 2、掌握文件的读取/写入方法<br/>
 3、掌握异常处理结构<br/>
 ## 四、核心代码<br/>
-try {<br/>
-			File file = new File("F:\\chang.txt");//文件所在地址<br/>
-			InputStream fli = new FileInputStream(file);<br/>
-			InputStreamReader in = new InputStreamReader(fli, "GBK");<br/>
-		while((n=in.read(a,0,100))!=-1) {<br/>
-		String s = new String(a,0,n);<br/>
-		this.n=n;<br/>
-		if(original!=null)<br/>
-		original = original+s;<br/>
-		else original=s;<br/>
-		}<br/>
+``` 
+	try {
+			File file = new File("F:\\chang.txt");//文件所在地址
+			InputStream fli = new FileInputStream(file);
+			InputStreamReader in = new InputStreamReader(fli, "GBK");
+		while((n=in.read(a,0,100))!=-1) {
+		String s = new String(a,0,n);
+		this.n=n;
+		if(original!=null)
+		original = original+s;
+		else original=s;
+		}
 		
-        in.close();<br/>
-      	}<br/>
-		catch (IOException e) {<br/>
-			System.out.println("File read erroe:"+e);<br/>
-		}<br/>
-		return original;<br/>
-	}<br/>
+        in.close();
+      	}
+		catch (IOException e) {
+			System.out.println("File read erroe:"+e);
+		}
+		return original;
+	}
+``` 
 ## 五、实验结果<br/>
 个人信息：<br/>
 姓名 性别 年龄 学号<br/>
