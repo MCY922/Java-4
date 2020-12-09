@@ -244,13 +244,15 @@ public class Text {
 		else original=s;
 		}
 		
-        in.close();
-      	}
-		catch (IOException e) {
-			System.out.println("File read erroe:"+e);
+       try {
+			File file = new File("F:\\长恨歌.txt");//成功导入后的存储地址
+			OutputStream out = new FileOutputStream(file,true);
+			
+            out.write(b);
+            out.flush();
+            out.close();
+           
 		}
-		return original;
-	}
 ``` 
 ## 五、实验结果<br/>
 个人信息：<br/>
